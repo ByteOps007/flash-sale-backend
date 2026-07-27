@@ -1,0 +1,21 @@
+### Get all products (should return [] initially)
+GET http://localhost:8080/api/products
+
+### Create a test product
+POST http://localhost:8080/api/products
+Content-Type: application/json
+
+{
+  "name": "Test Item",
+  "price": 999.99,
+  "stock": 50
+}
+
+### Get all products again (should now show the product with id and version)
+GET http://localhost:8080/api/products
+
+### Get a single product by id
+GET http://localhost:8080/api/products/1
+
+### Delete a product by id
+DELETE http://localhost:8080/api/products/1
